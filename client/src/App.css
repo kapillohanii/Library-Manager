@@ -1,0 +1,220 @@
+/* App.css */
+body {
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content {
+    flex: 1;
+}
+
+#footer {
+    bottom: -50px;
+    height: 80px;
+    left: 0;
+    position: relative;
+    right: 0;
+}
+
+.bton {
+    border-radius: 5px;
+    border: 1px solid rgb(84, 84, 255);
+    padding: 5px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 20px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    background-color: #55acee;
+    box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.bton:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+}
+
+.bton:hover {
+    background-color: #6FC6FF;
+}
+
+.red {
+    border: 1px solid rgb(175, 51, 51);
+    background-color: #ec4a4a;
+    box-shadow: 0px 5px 0px 0px #e7756d;
+}
+
+
+.red:hover {
+    background-color: #ff6f6f;
+}
+
+.H1 {
+    border-radius: 5px;
+    border: 1px solid rgb(55, 10, 97);
+    padding: 10px 35px;
+    font-size: 34px;
+    text-decoration: none;
+    margin: 20px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    background-color: #9702db;
+    box-shadow: 0px 5px 0px 0px #501069;
+}
+
+.H1:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+}
+
+.H1:hover {
+    background-color: #9c52f1;
+}
+
+.Input {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 5px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 0px 5px 0px 0px #a3b7c5;
+}
+
+.Select {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 5px;
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    box-shadow: 0px 5px 0px 0px #a3b7c5;
+}
+
+.Nav {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 5px;
+    position: relative;
+    color: black;
+    display: inline-block;
+    box-shadow: 0px 5px 0px 0px #a3b7c5;
+}
+
+.Nav:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+}
+
+.Nav:hover {
+    background-color: whitesmoke;
+}
+
+
+/* Members.css */
+/* Add your styles for the Members component here */
+
+#member-list {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-collapse: collapse;
+}
+
+#member-list hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px dashed #ddd;
+}
+
+#member-list table {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#member-list th, #member-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#member-list th {
+    background-color: #f2f2f2;
+}
+
+#member-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#member-list tr:hover {
+    background-color: #ddd;
+}
+
+
+#search-results {
+    left: inherit;
+    width: inherit;
+    background-color: #fff;
+    color: black;
+    max-height: 250px;
+    position: absolute;
+    overflow-y: auto;
+    z-index: 1;
+}
+#search-results p {
+    padding: 8px 12px;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+#search-results p:hover {
+    background-color: #f0f0f0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
