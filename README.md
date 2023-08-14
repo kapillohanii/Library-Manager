@@ -3,15 +3,27 @@
 Librarians are able to maintain:\
 -Books\
 -Members\
--Transactions
+-Transactions\
 
-![gh](https://github.com/kapillohanii/Library-Manager/blob/main/images/home.png)
-![gh](https://github.com/kapillohanii/Library-Manager/blob/main/images/book-list.png)
-![gh](https://github.com/kapillohanii/Library-Manager/blob/main/images/member-list.png)
-![gh](https://github.com/kapillohanii/Library-Manager/blob/main/images/issue.png)
-![gh](https://github.com/kapillohanii/Library-Manager/blob/main/images/transaction.png)
-![gh](https://github.com/kapillohanii/Library-Manager/blob/main/images/return.png)
-![gh](https://github.com/kapillohanii/Library-Manager/blob/main/images/search.png)
+with CRUD functionality.
+## Frameworks used
+-React.js for Frontend\
+-Flask python for Backend\
+
+## Home
+![Home](https://github.com/kapillohanii/Library-Manager/blob/main/images/home.png)
+## Books List
+![Books List](https://github.com/kapillohanii/Library-Manager/blob/main/images/books-list.png)
+## Member List
+![Member List](https://github.com/kapillohanii/Library-Manager/blob/main/images/member-list.png)
+## Issue Books
+![Issue Books](https://github.com/kapillohanii/Library-Manager/blob/main/images/issue.png)
+## Pending Transactions
+![Pending Transactions](https://github.com/kapillohanii/Library-Manager/blob/main/images/transaction.png)
+## Return Books
+![Return Books](https://github.com/kapillohanii/Library-Manager/blob/main/images/return.png)
+## Search Books
+![Search Books](https://github.com/kapillohanii/Library-Manager/blob/main/images/search.png)
 
 
 
