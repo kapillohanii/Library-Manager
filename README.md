@@ -27,6 +27,12 @@ with CRUD functionality.
 
 
 
+## Starting Flask Server
+-on terminal change your current directory to server\
+-run 'python app.py'
+
+
+
 
 ## Client framework
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
