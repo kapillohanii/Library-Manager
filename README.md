@@ -1,14 +1,19 @@
 # Library Manager
 
 Librarians are able to maintain:\
--Books\
--Members\
--Transactions\
-
+Books\
+Members\
+Transactions
 with CRUD functionality.
 ## Frameworks used
--React.js for Frontend\
--Flask python for Backend\
+React.js for Frontend\
+Flask python for Backend
+
+## Deployment
+[Library Manager](https://my-library-manager.vercel.app/)
+Server side of this project is deployed on pythonanywhere.com\
+Client side is deployed using vercel integration of github
+
 
 ## Home
 ![Home](https://github.com/kapillohanii/Library-Manager/blob/main/images/home.png)
