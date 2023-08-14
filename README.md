@@ -10,7 +10,7 @@ React.js for Frontend\
 Flask python for Backend
 
 ## Deployment
-[Library Manager](https://my-library-manager.vercel.app/)
+![Library Manager](https://my-library-manager.vercel.app/)\
 Server side of this project is deployed on pythonanywhere.com\
 Client side is deployed using vercel integration of github
 
@@ -33,8 +33,8 @@ Client side is deployed using vercel integration of github
 
 
 ## Starting Flask Server
--on terminal change your current directory to server\
--run 'python app.py'
+on terminal change your current directory to server\
+then run 'python app.py'
 
 
 
