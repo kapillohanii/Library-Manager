@@ -30,6 +30,26 @@ def search():
 
     return jsonify(search_results)
 
+@app.route('/book/<isbn>', methods=['GET'])
+def get_book(isbn):
+    book = next((book for book in books if book["isbn"] == isbn), None)
+    if book:
+        return jsonify(book)
+    else:
+        return jsonify({"message": "Book not found"}), 404
+
+def search():
+    query = request.args.get('query', '').lower()
+
+    search_results = []
+    for book in books:
+        title = book.get('title', '').lower()
+        authors = book.get('authors', '').lower()
+        if query in title or query in authors:
+            search_results.append(book)
+
+    return jsonify(search_results)
+
 
 book_id_counter = 1  # Initialize a counter for generating book IDs
 member_id_counter = 1  # Initialize a counter for generating member IDs
@@ -178,11 +198,14 @@ def import_books():
     title = request.args.get('title', '')
     authors = request.args.get('authors', '')
     num_books_to_import = int(request.args.get('num_books', 5))
-    api_endpoint = "https://frappe.io/api/method/frappe-library?page=1"
+    page= request.args.get('page',1)
+    api_endpoint = "https://frappe.io/api/method/frappe-library?"
     if title!='':
         api_endpoint += f'&title={title}'
     if authors!='':
         api_endpoint += f'&authors={authors}'
+    if page!='':
+        api_endpoint+= f'&page={page}'
     try:
         response = requests.get(api_endpoint)
         response.raise_for_status()
