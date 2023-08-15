@@ -10,7 +10,7 @@ function Books() {
   const [importTitle, setImportTitle] = useState('');
   const [importAuthor, setImportAuthor] = useState('');
   const [importNumBooks, setImportNumBooks] = useState('');
-
+  const [importPage, setImportPage] = useState('');
   useEffect(() => {
     fetchBooks();
   }, []);
@@ -19,7 +19,7 @@ function Books() {
     axios.get(`${api}/books`)
       .then(response => {
         setBooks(response.data.reverse());
-        
+
       })
       .catch(error => {
         console.error('Error fetching books:', error);
@@ -33,7 +33,8 @@ function Books() {
     const queryParams = {
       title: importTitle,
       authors: importAuthor,
-      num_books: importNumBooks
+      num_books: importNumBooks,
+      page: importPage
     };
     if (queryParams.num_books === '') {
       alert('Number of Books field cannot be empty.');
@@ -105,9 +106,9 @@ function Books() {
 
   return (
     <div>
-      <h2 style={{textAlign:'center'}}>Books</h2>
+      <h2 style={{ textAlign: 'center' }}>Books</h2>
       <div id="member-list">
-        <form onSubmit={importBooks}>
+        <form onSubmit={importBooks} style={{ textAlign: "center" }}>
           <input
             type="text"
             placeholder="Title"
@@ -123,6 +124,13 @@ function Books() {
             onChange={e => setImportAuthor(e.target.value)}
           />
           <input
+            type="text"
+            placeholder="Page"
+            className='Input'
+            value={importPage}
+            onChange={e => setImportPage(e.target.value)}
+          />
+          <input
             type="number"
             placeholder="Number of Books"
             className='Input'
@@ -132,7 +140,7 @@ function Books() {
           <button type="submit" className='bton'>Import Books</button>
         </form>
       </div>
-      <div id="member-list">
+      <div id="member-list" style={{ textAlign: "center" }}>
         <input
           type="text"
           placeholder="Title"
@@ -179,10 +187,10 @@ function Books() {
           </thead>
           <tbody>
             {books.map((book, index) => (
-              <tr key={index}>
-                <td>{book.title}</td>
-                <td>{book.authors}</td>
-                <td>Rs. {book.rent}</td>
+              <tr key={index} >
+                <td><a href={"/book/" + book.isbn} className='book-card'>{book.title}</a></td>
+                <td><a href={"/book/" + book.isbn} className='book-card'>{book.authors}</a></td>
+                <td>₹{book.rent}</td>
                 <td className="book-actions">
                   <button onClick={() => updateRent(book.bookID, prompt('Change rent to:'))} className='bton'>Change Rent</button>
                   <button onClick={() => deleteBook(book.bookID)} className='bton red'>Delete</button>

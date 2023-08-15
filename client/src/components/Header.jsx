@@ -1,6 +1,5 @@
 import React from "react";
 import Search from './Search';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'
 
 function Header() {

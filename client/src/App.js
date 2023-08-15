@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import IssueBooks from './pages/IssueBooks';
 import ReturnBooks from './pages/ReturnBooks';
 import Pending from './pages/Pending';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import BookPage from "./pages/BookPage"
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/issue" element={<IssueBooks />} />   
+        <Route path="/book/*" element={<BookPage />} />
         <Route path="/return" element={<ReturnBooks />} />   
         <Route path="/pending" element={<Pending />} />  
         </Routes>
@@ -20,6 +23,5 @@ function App() {
     </div>
   );
 }
-
 export default App;
 

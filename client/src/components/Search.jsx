@@ -47,7 +47,7 @@ function Search() {
       {isSearchFocused && ( // Only show search results when input is focused
         <div id="search-results">
           {searchResults.map((result, index) => (
-            <p key={index}>{result.title}</p>
+            <p key={index}><a href={"/book/" + result.isbn} className='book-card'>{result.title}</a></p>
           ))}
         </div>
       )}
