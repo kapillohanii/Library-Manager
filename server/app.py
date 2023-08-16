@@ -7,7 +7,7 @@ import requests
 import json
 import csv
 import numpy as np
-
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -243,7 +243,8 @@ def get_latest_transactions():
     return jsonify({'transactions': latest_transactions})
 
 
-# ... (rest of the code)
+env_config = os.getenv("PROD_APP_SETTINGS", "config.DevelopmentConfig")
+app.config.from_object(env_config)
 
 if __name__ == '__main__':
     app.run(debug=True)
