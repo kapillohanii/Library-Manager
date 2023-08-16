@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { api } from '../services/helper';
 
 function Search() {
   const [searchResults, setSearchResults] = useState([]);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [blurTimeout, setBlurTimeout] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,16 +19,29 @@ function Search() {
       .catch(error => {
         console.error('Error searching:', error);
       });
+
+    setIsFormSubmitted(true);
   };
 
   const handleSearchFocus = () => {
-    setIsSearchFocused(true); // Show search results when input is focused
+    setIsSearchFocused(true);
   };
 
   const handleSearchBlur = () => {
-    // Hide search results when input loses focus
-    setIsSearchFocused(false);
+    // Set a timeout before hiding the search results
+    setBlurTimeout(
+      setTimeout(() => {
+        setIsSearchFocused(false);
+      }, 250) // 0.25 second delay
+    );
   };
+
+  // Clear the timeout when the component unmounts or when form is submitted
+  useEffect(() => {
+    return () => {
+      clearTimeout(blurTimeout);
+    };
+  }, [blurTimeout]);
 
   return (
     <div>
@@ -44,7 +59,7 @@ function Search() {
           Search
         </button>
       </form>
-      {isSearchFocused && ( // Only show search results when input is focused
+      {isSearchFocused && (
         <div id="search-results">
           {searchResults.map((result, index) => (
             <p key={index}><a href={"/book/" + result.isbn} className='book-card'>{result.title}</a></p>
