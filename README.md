@@ -11,7 +11,7 @@ Flask python for Backend
 
 ## Deployment
 [Library Manager](https://my-library-manager.vercel.app/)\
-Server side of this project is deployed on pythonanywhere.com\
+Server side of this project is deployed on render.com\
 Client side is deployed using vercel integration of github
 
 
@@ -23,6 +23,8 @@ Client side is deployed using vercel integration of github
 ![Member List](https://github.com/kapillohanii/Library-Manager/blob/main/images/member-list.png)
 ## Issue Books
 ![Issue Books](https://github.com/kapillohanii/Library-Manager/blob/main/images/issue.png)
+## Book Card
+![Book Card](https://github.com/kapillohanii/Library-Manager/blob/main/images/book.png)
 ## Pending Transactions
 ![Pending Transactions](https://github.com/kapillohanii/Library-Manager/blob/main/images/transaction.png)
 ## Return Books
