@@ -5,7 +5,6 @@ import { api } from '../services/helper';
 function Search() {
   const [searchResults, setSearchResults] = useState([]);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [blurTimeout, setBlurTimeout] = useState(null);
 
   const handleSubmit = (event) => {
@@ -19,8 +18,6 @@ function Search() {
       .catch(error => {
         console.error('Error searching:', error);
       });
-
-    setIsFormSubmitted(true);
   };
 
   const handleSearchFocus = () => {
@@ -45,9 +42,10 @@ function Search() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form id='search-box' onSubmit={handleSubmit}>
         <input
           className="Input"
+          id='search-input'
           type="text"
           name="searchQuery"
           placeholder="Enter search term"
@@ -55,7 +53,7 @@ function Search() {
           onBlur={handleSearchBlur}
           style={{ marginRight: 0 }}
         />
-        <button type="submit" className="bton" style={{ marginLeft: 0 }}>
+        <button type="submit" className="bton" id="search-button" style={{ marginLeft: 0 }}>
           Search
         </button>
       </form>

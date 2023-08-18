@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat' !important;
 }
 
 .content {
@@ -59,10 +59,10 @@ body {
 .H1 {
     border-radius: 5px;
     border: 1px solid rgb(55, 10, 97);
-    padding: 10px 35px;
-    font-size: 24px;
+    padding: 5px 15px;
+    font-size: 34px;
     text-decoration: none;
-    margin: 20px;
+    margin: 0px;
     color: #fff;
     position: relative;
     display: inline-block;
@@ -173,7 +173,10 @@ body {
     background-color: #ddd;
 }
 
-
+#search-input{
+    margin: 20px;
+    margin-right: 0px;
+}
 #search-results {
     left: inherit;
     width: inherit;
@@ -253,6 +256,7 @@ tr:hover {
     height: 24px;
     padding: 4px;
     z-index: 1000;
+    
 }
 
 .bar {
@@ -265,19 +269,29 @@ tr:hover {
     opacity: 0;
 }
 
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: 30px;
+}
+#search-box{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
 /* Media query for screens with a maximum width of 500px */
 @media (max-width: 500px) {
     .nav-links {
         position: absolute;
         top: 0;
         right: -100%;
-        background-color: whitesmoke;
         width: 60%;
         height: 100%;
         padding: 10px;
         transition: right 0.3s;
-        display: flex;
-        flex-direction: column;
     }
 
     /* Show the burger icon */
@@ -288,5 +302,20 @@ tr:hover {
     /* Show the navigation links and close icon when the burger icon is active */
     .nav-links.show {
         right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        height: 200px;
+        position: absolute;
+        overflow-y: auto;
+        z-index: 1;
     }
+    table{
+        font-size: 14px;
+    }
+    .bton{
+        font-size: 14px;
+        padding: 3px;
+    }
+
 }
