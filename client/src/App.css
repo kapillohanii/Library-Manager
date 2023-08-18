@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     font-family: 'Montserrat';
 }
+
 .content {
     flex: 1;
 }
@@ -153,7 +154,8 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-#member-list th, #member-list td {
+#member-list th,
+#member-list td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -182,6 +184,7 @@ body {
     overflow-y: auto;
     z-index: 1;
 }
+
 #search-results p {
     padding: 8px 12px;
     margin: 0;
@@ -220,8 +223,70 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #ddd;
 }
-.book-card{
+
+.book-card {
     width: max-width;
     text-decoration: none;
     color: black;
+}
+
+/* App.css */
+
+/* Style for the navigation links */
+.Nav {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+}
+
+/* Style for the burger icon */
+.burger-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    /* Hide the burger icon by default */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    padding: 4px;
+    z-index: 1000;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.bar.active {
+    opacity: 0;
+}
+
+/* Media query for screens with a maximum width of 500px */
+@media (max-width: 500px) {
+    .nav-links {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        background-color: whitesmoke;
+        width: 60%;
+        height: 100%;
+        padding: 10px;
+        transition: right 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Show the burger icon */
+    .burger-icon {
+        display: flex;
+    }
+
+    /* Show the navigation links and close icon when the burger icon is active */
+    .nav-links.show {
+        right: 0;
+    }
 }
